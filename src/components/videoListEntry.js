@@ -8,7 +8,6 @@ angular.module('video-player')
       //   console.log(this.video)
       // }
     },
-    templateUrl: '/src/templates/videoListEntry.html',
-    controller: 'videoListCtrl'
+    templateUrl: '/src/templates/videoListEntry.html'
   });
 

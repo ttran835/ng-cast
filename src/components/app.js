@@ -6,8 +6,8 @@ angular.module('video-player')
 
   })
 
-  .controller('mainController', function () {
-
+  .controller('mainController', function (youTube) {
+    
     this.videos = exampleVideoData; 
     // console.log(this.videos);
     this.currentVideo = exampleVideoData[0];
@@ -15,4 +15,6 @@ angular.module('video-player')
     this.changeVideo = (index) => {
       this.currentVideo = this.videos[index]; 
     };
+
+    youTube.search();
   });
