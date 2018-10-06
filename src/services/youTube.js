@@ -10,14 +10,14 @@ angular.module('video-player')
           part: 'snippet',
           type: 'video',
           maxResults: '5',
-          q: 'cats',
+          q: query,
           videoEmbeddable: true
         }
       })
         .then( function(data) {
-          console.log(data);
+          console.log(data.data.items);
           if (callback) {
-            callback(data.items);
+            callback(0, data.data.items);
           }
         }).catch ( function(data) {
           console.log('FAILED', data);

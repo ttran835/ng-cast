@@ -9,12 +9,19 @@ angular.module('video-player')
   .controller('mainController', function (youTube) {
     
     this.videos = exampleVideoData; 
-    // console.log(this.videos);
     this.currentVideo = exampleVideoData[0];
 
-    this.changeVideo = (index) => {
+    this.changeVideo = (index, collection) => {
+      if (collection) {
+        this.videos = collection;
+      } 
       this.currentVideo = this.videos[index]; 
     };
 
-    youTube.search();
+    this.searchVids = (query) => {
+      youTube.search(query, (index, collection) => {
+        this.changeVideo(index, collection);
+      });
+    };
+
   });
