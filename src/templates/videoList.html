@@ -11,13 +11,19 @@
     </h5>
   </video-list-entry>
   <button 
+    class='previous'
     ng-click="$ctrl.changePage(1)"
     ng-hide='!$ctrl.listPointer'>
-      Previous 5
+    <span>
+      Previous
+    </span>
   </button>
-  <button 
+  <button
+    class='next'
     ng-click="$ctrl.changePage()"
     ng-hide='$ctrl.listPointer > $ctrl.allVideos.length - 6'>
-      Next 5
+    <span>
+      Next
+    </span>
   </button>
 </ul>
