@@ -5,6 +5,7 @@ angular.module('video-player')
     bindings: {
       searchVids: '<'
     },
+
     controller: 'search',
     templateUrl: 'src/templates/search.html'
   })
@@ -13,5 +14,9 @@ angular.module('video-player')
     this.click = () => {
       this.searchVids(this.searchInput);
       this.searchInput = '';
+    };
+
+    this.liveSearch = () => {
+      this.searchVids(this.searchInput);
     };
   });

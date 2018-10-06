@@ -4,10 +4,8 @@ angular.module('video-player')
       video: '<',
       index: '<',
       changeVideo: '<',
-      // console: function () {
-      //   console.log(this.video)
-      // }
     },
+    
     templateUrl: '/src/templates/videoListEntry.html'
   });
 
