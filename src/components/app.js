@@ -9,12 +9,10 @@ angular.module('video-player')
   .controller('mainController', function () {
 
     this.videos = exampleVideoData; 
-    console.log(this.videos);
+    // console.log(this.videos);
     this.currentVideo = exampleVideoData[0];
 
-
-
-
-
-
+    this.changeVideo = (index) => {
+      this.currentVideo = this.videos[index]; 
+    };
   });

@@ -1,7 +1,9 @@
 angular.module('video-player')
   .component('videoList', {
     bindings: {
-      videos: '<'
+      videos: '<',
+      changeVideo: '<',
+      index: '<'
     },
-    templateUrl:'/src/templates/videoList.html'
+    templateUrl: '/src/templates/videoList.html'
   });
