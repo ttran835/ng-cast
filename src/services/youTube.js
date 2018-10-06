@@ -1,6 +1,6 @@
 angular.module('video-player')
   .service('youTube', function($http) {
-  // TODO
+
     this.search = (query, callback) => {
       $http({
         method: 'GET',
@@ -13,14 +13,13 @@ angular.module('video-player')
           q: query,
           videoEmbeddable: true
         }
-      })
-        .then( function(data) {
-          console.log(data.data.items);
-          if (callback) {
-            callback(0, data.data.items);
-          }
-        }).catch ( function(data) {
-          console.log('FAILED', data);
-        });
+      }).then( function(data) {
+        console.log(data.data.items);
+        if (callback) {
+          callback(0, data.data.items);
+        }
+      }).catch ( function(data) {
+        console.log('FAILED', data);
+      });
     };
   });

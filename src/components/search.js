@@ -11,7 +11,7 @@ angular.module('video-player')
   })
   
   .controller('search', function () {
-    this.click = () => {
+    this.clickSearch = () => {
       this.searchVids(this.searchInput);
       this.searchInput = '';
     };
