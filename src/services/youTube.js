@@ -9,7 +9,7 @@ angular.module('video-player')
           key: YOUTUBE_API_KEY,
           part: 'snippet',
           type: 'video',
-          maxResults: '5',
+          maxResults: '15',
           q: query,
           videoEmbeddable: true
         }

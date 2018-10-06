@@ -10,5 +10,14 @@
       component goes here
     </h5>
   </video-list-entry>
-  
+  <button 
+    ng-click="$ctrl.changePage(1)"
+    ng-hide='!$ctrl.listPointer'>
+      Previous 5
+  </button>
+  <button 
+    ng-click="$ctrl.changePage()"
+    ng-hide='$ctrl.listPointer > $ctrl.allVideos.length - 6'>
+      Next 5
+  </button>
 </ul>
